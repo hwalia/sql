@@ -54,7 +54,8 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+One way to define CUSTOMER_ADDRESS table is with all relevant columns. In this scenario, in case of an update of address will cause an overwrite and hence erasing previous address. 
+Second way is which contains few extra columns added to preserve history. For example, valid_from , valid_to (usually contains value 12-31-9999) and isactive = 0 or 1 depending upon which is current record.
 ```
 
 ***
